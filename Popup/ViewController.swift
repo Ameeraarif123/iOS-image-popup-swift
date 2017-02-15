@@ -34,7 +34,7 @@ class ViewController: UIViewController {
     @IBAction func showPopup(_ sender: AnyObject) {
         self.popViewController = PopupViewController(nibName: "PopupViewController", bundle: nil)
         self.popViewController.title = "This is a popup view"
-        self.popViewController.showInView(self.view, withImage: UIImage(named: "login"), withMessage: "You just triggered a great popup window", animated: true)
+        self.popViewController.showInView(self.view, withImage: UIImage(named: "popup"), animated: true)
     }
 
 }

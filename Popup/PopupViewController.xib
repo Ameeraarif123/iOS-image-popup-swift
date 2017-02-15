@@ -11,8 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PopupViewController" customModule="Popup" customModuleProvider="target">
             <connections>
-                <outlet property="logoImg" destination="C1I-vp-d9D" id="GoU-pN-W5x"/>
-                <outlet property="messageLabel" destination="h0D-Ed-SOq" id="5Bl-8E-XkU"/>
+                <outlet property="imageView" destination="x7f-KL-Mqf" id="Apz-eB-ZKl"/>
                 <outlet property="popUpView" destination="9qn-mM-Lun" id="bdh-Yg-4Ji"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -25,37 +24,28 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9qn-mM-Lun">
                     <rect key="frame" x="29.5" y="139" width="261" height="290"/>
                     <subviews>
-                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="C1I-vp-d9D">
-                            <rect key="frame" x="95" y="8" width="70" height="70"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="x7f-KL-Mqf">
+                            <rect key="frame" x="0.0" y="0.0" width="261" height="290"/>
                         </imageView>
-                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="slG-f1-cUj">
-                            <rect key="frame" x="98" y="252" width="54" height="30"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <state key="normal" title="Dismiss"/>
-                            <connections>
-                                <action selector="closePopup:" destination="-1" eventType="touchUpInside" id="13x-24-HZp"/>
-                            </connections>
-                        </button>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h0D-Ed-SOq">
-                            <rect key="frame" x="8" y="86" width="244" height="80"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            <nil key="highlightedColor"/>
-                        </label>
                     </subviews>
-                    <color key="backgroundColor" red="0.66666666666666663" green="0.66666666666666663" blue="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="290" id="QRR-tI-jxB"/>
-                        <constraint firstAttribute="width" constant="261" id="m3n-yP-YIT"/>
+                        <constraint firstItem="x7f-KL-Mqf" firstAttribute="centerY" secondItem="9qn-mM-Lun" secondAttribute="centerY" id="1kn-RI-iop"/>
+                        <constraint firstItem="x7f-KL-Mqf" firstAttribute="leading" secondItem="9qn-mM-Lun" secondAttribute="leading" id="23J-Zj-YVh"/>
+                        <constraint firstAttribute="bottom" secondItem="x7f-KL-Mqf" secondAttribute="bottom" id="F2A-PZ-LWT"/>
+                        <constraint firstAttribute="trailing" secondItem="x7f-KL-Mqf" secondAttribute="trailing" id="SCv-mb-p8U"/>
+                        <constraint firstItem="x7f-KL-Mqf" firstAttribute="centerX" secondItem="9qn-mM-Lun" secondAttribute="centerX" id="iK8-Vy-ET2"/>
+                        <constraint firstItem="x7f-KL-Mqf" firstAttribute="top" secondItem="9qn-mM-Lun" secondAttribute="top" id="vZ9-LD-n8M"/>
                     </constraints>
                 </view>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="9qn-mM-Lun" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="aqN-vZ-NEP"/>
-                <constraint firstItem="9qn-mM-Lun" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="ge7-bV-ecg"/>
+                <constraint firstItem="9qn-mM-Lun" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="HjK-2S-ORT"/>
+                <constraint firstAttribute="trailing" secondItem="9qn-mM-Lun" secondAttribute="trailing" constant="29.5" id="MPs-so-deL"/>
+                <constraint firstAttribute="bottom" secondItem="9qn-mM-Lun" secondAttribute="bottom" constant="139" id="UAa-Xf-LgA"/>
+                <constraint firstItem="9qn-mM-Lun" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="enZ-U2-rd7"/>
+                <constraint firstItem="9qn-mM-Lun" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="29.5" id="i68-j0-Vc0"/>
+                <constraint firstItem="9qn-mM-Lun" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="139" id="y2f-4T-e0V"/>
             </constraints>
             <point key="canvasLocation" x="143" y="185"/>
         </view>

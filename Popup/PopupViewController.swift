@@ -13,8 +13,7 @@ class PopupViewController: UIViewController {
     
     
     @IBOutlet var popUpView: UIView!
-    @IBOutlet var logoImg: UIImageView!
-    @IBOutlet var messageLabel: UILabel!
+    @IBOutlet var imageView: UIImageView!
 
     
     override func viewDidLoad() {
@@ -24,6 +23,12 @@ class PopupViewController: UIViewController {
         self.popUpView.layer.cornerRadius = 5
         self.popUpView.layer.shadowOpacity = 0.5
         self.popUpView.layer.shadowOffset = CGSize(width: 0.0, height: 0.0)
+        
+        
+        //Tap gesture on image
+        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(imageTapped(tapGestureRecognizer:)))
+        imageView.isUserInteractionEnabled = true
+        imageView.addGestureRecognizer(tapGestureRecognizer)
        
         // Do any additional setup after loading the view.
     }
@@ -33,11 +38,45 @@ class PopupViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    func showInView(_ aView: UIView!, withImage image : UIImage!, withMessage message: String!, animated: Bool)
+    func showInView(_ aView: UIView!, withImage image : UIImage!,animated: Bool)
     {
         aView.addSubview(self.view)
-        logoImg!.image = image
-        messageLabel!.text = message
+        imageView!.image = image
+        
+        
+//        let imageView = UIImageView(image: image!)
+//        imageView.image = image;
+        
+        /** Get Device Screen Size **/
+//        let screenSize = UIScreen.main.bounds
+//        let cgFloatWidth: CGFloat = screenSize.width
+//        let width = Float(cgFloatWidth)
+//        let cgFloatHeight: CGFloat = screenSize.height
+//        let height = Float(cgFloatHeight)
+//        
+//        
+//        print(image.size.height);
+//        print(image.size.width);
+//        
+//        print(screenSize.height);
+//        print(screenSize.width);
+//        
+//        var x:Float = 0.0
+//        var y:Float = 0.0
+//        if(image.size.width > screenSize.width || image.size.height > screenSize.height){
+//            x = width-80.0;
+//            y = height-250.0;
+//        }else{
+//            x = width;
+//            y = height;
+//        }
+        
+        
+        //self.popUpView.frame = CGRect(x:0, y:0 , width:Int(x), height:Int(y))
+        //imageView.frame = CGRect(x: 0, y: 0, width: Int(x), height: Int(y));
+       // self.popUpView.addSubview(imageView);
+        
+        //messageLabel!.text = message
         if animated
         {
             self.showAnimate()
@@ -67,10 +106,11 @@ class PopupViewController: UIViewController {
         });
     }
     
-    @IBAction func closePopup(_ sender: AnyObject) {
-         self.removeAnimate()
+    func imageTapped(tapGestureRecognizer: UITapGestureRecognizer)
+    {
+        self.removeAnimate()
     }
-
+    
     /*
     // MARK: - Navigation
 
